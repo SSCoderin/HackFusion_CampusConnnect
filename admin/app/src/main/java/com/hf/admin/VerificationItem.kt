@@ -1,3 +1,7 @@
 package com.hf.admin
 
-data class VerificationItem(val email: String, val imageUrl: String?)
+class VerificationItem(
+    val email: String,
+    val imageName: String // Add this property
+)
+

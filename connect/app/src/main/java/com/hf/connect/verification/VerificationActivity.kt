@@ -69,14 +69,23 @@ class VerificationActivity : AppCompatActivity() {
         // Check if email is already verified
         checkEmailVerification(email)
     }
-
     private fun checkEmailVerification(email: String) {
         val verifiedRef = firestore.collection("verified").document(email)
         verifiedRef.get()
             .addOnSuccessListener { documentSnapshot ->
                 if (documentSnapshot.exists()) {
-                    // Email already verified, navigate to MainActivity or HomeFragment
-                    navigateToMainOrHome()
+                    // Email already verified, check if signed up
+                    if (isUserSignedUp()) {
+                        // If signed up, move to MainActivity
+                        val intent = Intent(this, SignUpActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        // If not signed up, navigate to SignUpActivity
+                        val intent = Intent(this, SignUpActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
                 } else {
                     // Email not verified, submit verification
                     uploadVerificationData(email)
@@ -86,6 +95,7 @@ class VerificationActivity : AppCompatActivity() {
                 Toast.makeText(this, "Failed to check email verification: ${e.message}", Toast.LENGTH_SHORT).show()
             }
     }
+
 
     private fun uploadVerificationData(email: String) {
         val verificationRef = firestore.collection("verification").document(email)
@@ -114,7 +124,7 @@ class VerificationActivity : AppCompatActivity() {
             setMessage("Your email ID and ID card are sent for verification. You will receive an email shortly. Once verified, you will be able to access the app.")
             setPositiveButton("OK") { _, _ ->
                 // Navigate to MainActivity or HomeFragment
-                navigateToMainOrHome()
+                finish()
             }
             setCancelable(false) // Prevent closing the dialog by tapping outside or pressing back button
         }
@@ -135,6 +145,8 @@ class VerificationActivity : AppCompatActivity() {
         }
         finish()
     }
+
+
 
     private fun isUserSignedUp(): Boolean {
         // Retrieve the flag indicating whether the user has signed up from SharedPreferences

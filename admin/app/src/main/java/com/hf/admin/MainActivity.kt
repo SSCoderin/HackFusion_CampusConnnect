@@ -1,5 +1,6 @@
 package com.hf.admin
 
+import VerificationAdapter
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -77,6 +78,6 @@ class MainActivity : AppCompatActivity(), VerificationAdapter.OnItemClickListene
     }
 
     companion object {
-        private const val TAG = "AccessActivity"
+        private const val TAG = "MainActivity"
     }
 }

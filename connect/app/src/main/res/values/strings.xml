@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">connect</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Friends</string>
+    <string name="title_notifications">Account</string>
+    <string name="comment" />
+    <string name="like" />
+</resources>

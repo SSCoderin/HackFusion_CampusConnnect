@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "841279663406",
+    "firebase_url": "https://connect-1182e-default-rtdb.firebaseio.com",
+    "project_id": "connect-1182e",
+    "storage_bucket": "connect-1182e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841279663406:android:6cb9d6edce29556ea15ebf",
+        "android_client_info": {
+          "package_name": "com.hf.admin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB5iuGet3PssAGlYceqksmSvXqTHahDHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841279663406:android:8c5832b7eb37c1c3a15ebf",
+        "android_client_info": {
+          "package_name": "com.hf.connect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB5iuGet3PssAGlYceqksmSvXqTHahDHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Image view to display selected image -->
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create a new post"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <!-- Button to select image -->
+    <ImageView
+        android:id="@+id/imageViewSelectedImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="5dp"
+
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_crop" />
+
+    <Button
+        android:id="@+id/buttonSelectImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Select Image"
+        android:textSize="12sp" />
+
+    <!-- Edit text for entering post description -->
+    <EditText
+        android:id="@+id/editTextPostDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Enter post description"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:textSize="14sp" />
+
+    <!-- Button to create and upload post -->
+    <Button
+        android:id="@+id/buttonCreatePost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Create Post" />
+
+</LinearLayout>
